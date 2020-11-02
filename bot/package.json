@@ -1,0 +1,20 @@
+{
+  "name": "applicationsbot",
+  "version": "1.0.0",
+  "description": "Applications Bot, Connected With The 'Simple Applications' Plugin.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Lior Koren - [HirboSH];",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "events": "^3.2.0",
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
+  }
+}
