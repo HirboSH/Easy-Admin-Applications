@@ -1,6 +1,6 @@
 ## Introduction
 
-An add-on that allows easier submission of applications to  be one of the server's Admin, built into the game. All the answers stored at your own DB.
+An add-on that allows easier submission of applications to  be one of the server's Admin, built into the game. All the answers stored at your own DB. [Discord bot included, the bot gives you the option to manage the applications easily];
 
 ## Installation
 
