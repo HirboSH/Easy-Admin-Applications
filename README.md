@@ -93,6 +93,8 @@ exports.Team = ["501465377918812161"]; // [This Is My ID Tho Lol;]
 
 After setting all up correctly, i can say that you're done! ``[2/2 steps completed!]``
 
+Open the terminal and run ``npm i``. [because I did not attach the ``node_modules`` files.]
+
 And don't forget that to start the bot there's a file named ``start.bat``, yes?
 
 --------------
