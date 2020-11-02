@@ -176,4 +176,4 @@ Execute - ``YOUR_PREFIXhelp``. [You can change the PRERFIX in ``.env`` file];
 
 2. **Steam Profile** - [Link](https://steamcommunity.com/id/hirbosh/)
 
-> :D <3
+:D <3
