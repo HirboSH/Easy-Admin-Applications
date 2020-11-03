@@ -85,7 +85,7 @@ public void OnClientDisconnect(int client){
 public Action TIMER_Ad(Handle timer){
 	for (int i = 1; i <= MaxClients; i++){
 		if (IsValidClient(i) && !IsValidAdmin(i) && g_cvTimerStatus.BoolValue){
-			PrintToChat(i, " \x04%s \x01Want to \x04ben an Admin on this server\x01? Submit an \x04Application \x01by using: `\x04!application || !applications || !apps\x01`.", g_szPREFIX);
+			PrintToChat(i, " \x04%s \x01Want to \x04be an Admin on this server\x01? Submit an \x04Application \x01by using: `\x04!application || !applications || !apps\x01`.", g_szPREFIX);
 		}
 		return Plugin_Handled;
 	}
