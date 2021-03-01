@@ -47,7 +47,7 @@ So, quite easy. Isn't it? LOL. ``[1/2 Steps completed!]``
 #### Windows Hosted
 --------------
 
-Download ``node.js``, download the **CURRENT** version. ``Not`` the **LTS**.
+Download ``node.js``, download the **LTS** version. ``Not`` the **CURRENT** version.
 
 Now, go to a file named ``.env``, open it, and edit the information inside it. It should looks like this,
 
