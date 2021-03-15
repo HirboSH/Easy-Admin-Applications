@@ -52,43 +52,31 @@ Download ``node.js``, download the **LTS** version. ``Not`` the **CURRENT** vers
 Now, go to a file named ``.env``, open it, and edit the information inside it. It should looks like this,
 
 ```env
-TOKEN="YOUR_BOT_TOKEN"
-DEFAULT_COLOR="DEFAULT_EMBED_COLOR"
+TOKEN="YOUR_BOT_TOKEN_EDITME"
+TEAM="YOUR_TEAM_DISCORD_IDS_EDIT_ME"
 PREFIX="YOUR_BOT_PREFIX_EDITME"
+DEFAULT_COLOR="DEFAULT_EMBED_COLOR_EDITME"
 GUILD="YOUR_GUILD_ID_EDITME"
-CHANNEL="CHANNEL_FOR_ACCEPTED_ADMINS"
+CHANNEL="CHANNEL_FOR_ACCEPTED_ADMINS_EDITME"
+DB_HOST_IP="DB_HOST_IP_EDITME"
+DB_USERNAME="DB_USERNAME_EDITME"
+DB_USER_PASSWORD="DB_USER_PASSWORD_EDITME"
+DB_NAME="DB_NAME_EDITME"
 ```
 
 Edit the information for ``TOKEN``, ``DEFAULT_COLOR``, ``PREFIX``, ``GUILD`` and ``CHANNEL``. For instance, 
 
 ```env
 TOKEN="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-DEFAULT_COLOR="#FFFFFF"
+TEAM="ID1 ID2 ID3 ID4 ID5"
 PREFIX="!"
+DEFAULT_COLOR="DEFAULT_COLOR="#FFFFFF""
 GUILD="12345678910"
 CHANNEL="12345678910"
-```
-
-Our last step, go to ``config/config.js``, open it, and edit the information inside it. It should looks like this,
-
-```javascript
-// SQL stuff;
-
-exports.HostIP = ""; // host IP;
-exports.UserName = ""; // username for the database;
-exports.UserPassword = ""; // password for the user;
-exports.DBName = ""; // table name;
-
-// end SQL stuff.. Quite easy isn't it?;
-
-// who can access to review the applications;
-
-exports.Team = ["501465377918812161"]; // [This Is My ID Tho Lol;]
-
-/*  ID's of the applications team, who can review the applications;
-    Add ID's Like That -> ["ID1", "ID2", "ID3", "ID4"];
-    [You can add how many ID's as you want];
-*/
+DB_HOST_IP="127.0.0.1"
+DB_USERNAME="root"
+DB_USER_PASSWORD="root"
+DB_NAME="easyAdminApplications"
 ```
 
 After setting all up correctly, i can say that you're done! ``[2/2 steps completed!]``
