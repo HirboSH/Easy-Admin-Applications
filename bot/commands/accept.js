@@ -1,6 +1,6 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const mysql = require('mysql');
-const { HostIP, UserName, UserPassword, DBName } = require("../config/config");
+const { DEFUALT_COLOR, GUILD, CHANNEL, DB_HOST_IP, DB_USERNAME, DB_USER_PASSWORD, DB_NAME } = process.env;
 
 module.exports.run = async(client, message, args) => {
 
@@ -22,9 +22,9 @@ module.exports.run = async(client, message, args) => {
 
     } else {
 
-        let UsageErrorEmbed = new Discord.MessageEmbed()
+        let UsageErrorEmbed = new MessageEmbed()
 
-            .setColor(process.env.DEFUALT_COLOR)
+            .setColor(DEFUALT_COLOR)
             .setDescription(`[❎] -> Usage -> **\`!accept <Application_ID>\`**.`)
             .setFooter(`Made With ❤️ By HirboSH`)
             .setTimestamp();
@@ -67,10 +67,10 @@ module.exports.run = async(client, message, args) => {
 
             if (ApplicationIDFromUser == ApplicationID){
 
-                let AcceptEmbed = new Discord.MessageEmbed()
+                let AcceptEmbed = new MessageEmbed()
         
                     .setTitle(`[🎉] -> Accepted! <- [🎉]`)
-                    .setColor(process.env.DEFUALT_COLOR)
+                    .setColor(DEFUALT_COLOR)
                     .setDescription(`
                     > **Accepted A New Admin!**
         
@@ -92,13 +92,13 @@ module.exports.run = async(client, message, args) => {
         
                 message.channel.send(AcceptEmbed);
 
-                let guild = client.guilds.cache.get(process.env.GUILD);
-                let channel = guild.channels.cache.get(process.env.CHANNEL);
+                let guild = client.guilds.cache.get(GUILD);
+                let channel = guild.channels.cache.get(CHANNEL);
         
-                let NewAdminEmbed = new Discord.MessageEmbed()
+                let NewAdminEmbed = new MessageEmbed()
         
                     .setTitle(`[🎉] -> New Admin Accepted! <- [🎉]`)
-                    .setColor(process.env.DEFUALT_COLOR)
+                    .setColor(DEFUALT_COLOR)
                     .setDescription(`
                     -> **Player Name** -> \`${PlayerNickName}\`.
                     -> **Player Submited For [Server Name]** -> \`${PlayerServer}\`.
@@ -112,9 +112,9 @@ module.exports.run = async(client, message, args) => {
 
             } else {
         
-                let IDErrorEmbed = new Discord.MessageEmbed()
+                let IDErrorEmbed = new MessageEmbed()
         
-                    .setColor(process.env.DEFUALT_COLOR)
+                    .setColor(DEFUALT_COLOR)
                     .setDescription(`[❎] -> The Application ID You Wrote **\`${ApplicationIDFromUser}\`**, **Is Not The ID Of The First Application To Review**.`)
                     .setTimestamp();
         
