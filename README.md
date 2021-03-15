@@ -64,7 +64,7 @@ DB_USER_PASSWORD="DB_USER_PASSWORD_EDITME"
 DB_NAME="DB_NAME_EDITME"
 ```
 
-Edit the information for ``TOKEN``, ``DEFAULT_COLOR``, ``PREFIX``, ``GUILD`` and ``CHANNEL``. For instance, 
+Edit the information for all the things here. For instance, 
 
 ```env
 TOKEN="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
