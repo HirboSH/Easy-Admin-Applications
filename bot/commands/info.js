@@ -1,11 +1,12 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+const { DEFAULT_COLOR } = process.env;
 
 module.exports.run = async(client, message, args) => {
 
-    let infoEmbed = new Discord.MessageEmbed()
+    let infoEmbed = new MessageEmbed()
 
         .setTitle(`[⚙️] -> Info <- [⚙️]`)
-        .setColor(process.env.DEFAULT_COLOR)
+        .setColor(DEFAULT_COLOR)
         .setDescription(`
 
         > **Contact Information ->**
