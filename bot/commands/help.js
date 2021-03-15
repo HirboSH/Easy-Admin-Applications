@@ -1,11 +1,12 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+const { DEFUALT_COLOR } = process.env;
 
 module.exports.run = async(client, message, args) => {
 
-    let helpEmbed = new Discord.MessageEmbed()
+    let helpEmbed = new MessageEmbed()
 
         .setTitle(`[⚙️] -> Help Center <- [⚙️]`)
-        .setColor(process.env.DEFAULT_COLOR)
+        .setColor(DEFAULT_COLOR)
         .setDescription(`
         > **__Commands__**
 
