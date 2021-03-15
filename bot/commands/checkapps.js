@@ -1,6 +1,6 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const mysql = require('mysql');
-const { HostIP, UserName, UserPassword, DBName } = require("../config/config");
+const { DEFUALT_COLOR, DB_HOST_IP, DB_USERNAME, DB_USER_PASSWORD, DB_NAME } = process.env;
 
 module.exports.run = async(client, message, args) => {
 
@@ -16,7 +16,7 @@ module.exports.run = async(client, message, args) => {
     var AnswerOnDuty;
     var AnswerExperience;
 
-    var connection = mysql.createConnection({host: HostIP, user: UserName, password: UserPassword, database: DBName});
+    var connection = mysql.createConnection({ host: DB_HOST_IP, user: DB_USERNAME, password: DB_USER_PASSWORD, database: DB_NAME });
 
     SQL_Connection();
 
@@ -58,10 +58,10 @@ module.exports.run = async(client, message, args) => {
                 AnswerOnDuty = results[0].AnswerOnDuty;
                 AnswerExperience = results[0].AnswerExperience;
 
-                    let checkappsEmbed = new Discord.MessageEmbed()
+                    let checkappsEmbed = new MessageEmbed()
 
                         .setTitle(`[⏱️] -> Available Applications Waiting For Review <- [⏱️]`)
-                        .setColor(process.env.DEFAULT_COLOR)
+                        .setColor(DEFAULT_COLOR)
                         .setDescription(`
                         > **Player-NickName** -> \`${PlayerNickName}\`.
 
@@ -99,9 +99,9 @@ module.exports.run = async(client, message, args) => {
 
                         message.channel.send(checkappsEmbed);
             } else {
-                let NoResultsEmbed = new Discord.MessageEmbed()
+                let NoResultsEmbed = new MessageEmbed()
 
-                .setColor(process.env.DEFUALT_COLOR)
+                .setColor(DEFUALT_COLOR)
                 .setDescription(`[❎] -> There's **No Pending Applications** For Review.`)
                 .setFooter(`Made With ❤️ By HirboSH`)
                 .setTimestamp();
