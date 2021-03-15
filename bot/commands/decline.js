@@ -1,6 +1,6 @@
-const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 const mysql = require('mysql');
-const { HostIP, UserName, UserPassword, DBName } = require("../config/config");
+const { DEFUALT_COLOR, DB_HOST_IP, DB_USERNAME, DB_USER_PASSWORD, DB_NAME } = process.env;
 
 module.exports.run = async(client, message, args) => {
 
@@ -17,26 +17,22 @@ module.exports.run = async(client, message, args) => {
     var AnswerDiscord;
 
     if (args[0]){
-
         ApplicationIDFromUser = args[0];
 
     } else {
+        let UsageErrorEmbed = new MessageEmbed()
 
-        let UsageErrorEmbed = new Discord.MessageEmbed()
-
-            .setColor(process.env.DEFUALT_COLOR)
+            .setColor(DEFUALT_COLOR)
             .setDescription(`[❎] -> Usage -> **\`!decline <Application_ID>\`**.`)
             .setTimestamp();
 
         return message.channel.send(UsageErrorEmbed);
     }
 
-    var connection = mysql.createConnection({host: HostIP, user: UserName, password: UserPassword, database: DBName});
+    var connection = mysql.createConnection({ host: DB_HOST_IP, user: DB_USERNAME, password: DB_USER_PASSWORD, database: DB_NAME });
 
     SQL_Connection();
-
     SQL_QueryNum1();
-
     SQL_End();
 
     function SQL_Connection(){
@@ -66,10 +62,10 @@ module.exports.run = async(client, message, args) => {
 
             if (ApplicationIDFromUser == ApplicationID){
 
-                let DeclinedEmbed = new Discord.MessageEmbed()
+                let DeclinedEmbed = new MessageEmbed()
         
                     .setTitle(`[😢] -> Declined! <- [😢]`)
-                    .setColor(process.env.DEFUALT_COLOR)
+                    .setColor(DEFUALT_COLOR)
                     .setDescription(`
                     > **Application Declined...😢**
         
@@ -92,10 +88,8 @@ module.exports.run = async(client, message, args) => {
                 message.channel.send(DeclinedEmbed);
 
             } else {
-        
-                let IDErrorEmbed = new Discord.MessageEmbed()
-        
-                    .setColor(process.env.DEFUALT_COLOR)
+                let IDErrorEmbed = new MessageEmbed()
+                    .setColor(DEFUALT_COLOR)
                     .setDescription(`[❎] -> The Application ID You Wrote **\`${ApplicationIDFromUser}\`**, **Is Not The ID Of The First Application To Review**.`)
                     .setFooter(`Made With ❤️ By HirboSH`)
                     .setTimestamp();
