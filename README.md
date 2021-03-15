@@ -49,7 +49,7 @@ So, quite easy. Isn't it? LOL. ``[1/2 Steps completed!]``
 
 Download ``node.js``, download the **LTS** version. ``Not`` the **CURRENT** version.
 
-Now, go to a file named ``.env``, open it, and edit the information inside it. It should looks like this,
+Now, go to a file named ``.env`` inside the bot's folder, open it, and edit the information inside it. It should looks like this,
 
 ```env
 TOKEN="YOUR_BOT_TOKEN_EDITME"
