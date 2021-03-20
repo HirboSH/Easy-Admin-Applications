@@ -2,6 +2,8 @@
 
 A plugin that allows easier submission of applications to  be one of the server's Admin, built into the game. All the answers stored at your own DB. [Discord bot included, the bot gives you the option to manage the applications easily];
 
+**Alliedmodders Therad** - [Link](https://forums.alliedmods.net/showthread.php?p=2723503#post2723503)
+
 ## Installation
 
 --------------
